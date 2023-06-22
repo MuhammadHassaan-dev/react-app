@@ -2,12 +2,12 @@ import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 import { createUserWithFirebase } from "./firebaseFunction";
 
-const Login = () => {
-  const onFinish = (values) => {
+const Login: React.FC = () => {
+  const onFinish = (values: any) => {
     createUserWithFirebase(values.email, values.password);
     console.log("Success:", values);
   };
-  const onFinishFailed = (errorInfo) => {
+  const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };
   return (
