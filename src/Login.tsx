@@ -1,8 +1,12 @@
 import React from "react";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Checkbox, Form, Input ,Row,Col} from "antd";
 import { createUserWithFirebase } from "./firebaseFunction";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Login: React.FC = () => {
+  const { loginWithRedirect ,user, isAuthenticated, isLoading ,logout} = useAuth0();
+  console.log("isAuthenticated",isAuthenticated);
+  
   const onFinish = (values: any) => {
     createUserWithFirebase(values.email, values.password);
     console.log("Success:", values);
@@ -11,6 +15,7 @@ const Login: React.FC = () => {
     console.log("Failed:", errorInfo);
   };
   return (
+    <>
     <Form
       name="basic"
       labelCol={{
@@ -81,6 +86,24 @@ const Login: React.FC = () => {
         </Button>
       </Form.Item>
     </Form>
+    <Row>
+    {
+      isAuthenticated ? (
+        <Col>
+          <Button onClick={() => logout({ logoutParams: { returnTo: window.location.href = 'http://localhost:3000/logout' } })}>Log Out</Button>
+       </Col>
+      ) :
+      (
+        <Col>
+          <Button onClick={() => loginWithRedirect()}>Auth0 Login</Button>
+       </Col>
+      )
+    }
+    
+       
+       </Row>
+    </>
   );
+  
 };
 export default Login;
