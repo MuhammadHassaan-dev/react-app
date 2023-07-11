@@ -1,12 +1,11 @@
-import { firebaseConfig } from "./firebase-config";
+import { auth } from "./firebase-config";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { createUserWithEmailAndPassword, auth } from "./firebase-config";
-
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 
 export const createUserWithFirebase = async (email, password) => {
+  console.log("email", email);
+  console.log("password", password);
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in

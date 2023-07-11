@@ -3,7 +3,7 @@ import Home from "./Home";
 import Dashboard from "./Dashboard";
 import Logout from "./Logout";
 import Posts from "./Posts";
-// import ProtectedRoute from "./ProtectedRoute";
+import ProtectedRoute from "./ProtectedRoute";
 
 
 
@@ -16,9 +16,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/logout" element={<Logout />} />
-        {/* <ProtectedRoute path="/posts" element={<Posts/>} auth={true}/> */}
+        <Route element={<ProtectedRoute />}  >
+           <Route path="/dashboard" element={<Dashboard />} />
+         </Route >
       </Routes>
     </BrowserRouter>
   );

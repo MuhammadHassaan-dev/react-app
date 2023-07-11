@@ -21,14 +21,15 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-export const firebaseConfig = {
-  apiKey: "AIzaSyBK3k2jt556iT4ModBhhqgmPPXAhPA3Kbs",
-  authDomain: "reactproject-ad5e2.firebaseapp.com",
-  projectId: "reactproject-ad5e2",
-  storageBucket: "reactproject-ad5e2.appspot.com",
-  messagingSenderId: "479285847401",
-  appId: "1:479285847401:web:ae775cd2f5eb8fe0ab49f8",
-  measurementId: "G-KQ6PXLRKVQ",
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDmP3faSyWaAtrx7y5Kb7OeoOyCzUt7hHs",
+  authDomain: "reactapp-f7d64.firebaseapp.com",
+  projectId: "reactapp-f7d64",
+  storageBucket: "reactapp-f7d64.appspot.com",
+  messagingSenderId: "674190203491",
+  appId: "1:674190203491:web:33ccd1fc98bcb8ed5ab656",
+  measurementId: "G-6TYVLEEQEZ",
 };
 // const currentUser = auth.currentUser;
 // console.log("currentUser", currentUser);
