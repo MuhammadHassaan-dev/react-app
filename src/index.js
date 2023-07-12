@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import allReducers from "./reducers";
 import reportWebVitals from "./reportWebVitals";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+let store = createStore(allReducers);
+console.log("store", store.getState().counterValue);
+console.log("store", store.getState().loginValue);
 root.render(
   <Auth0Provider
     domain="dev-63c6kn1bvk4wrxhp.us.auth0.com"
@@ -14,7 +20,9 @@ root.render(
       redirect_uri: window.location.origin,
     }}
   >
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </Auth0Provider>
 );
 

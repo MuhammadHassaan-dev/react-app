@@ -39,7 +39,7 @@ const Home = () => {
   const navigate = useNavigate();
   const [person,setPerson] =useState<IUser>(userObj) ;
   let componentName:string ="Home" ;
-
+ 
   const initialUser: IUser = {
     id: 0,
     name: "",

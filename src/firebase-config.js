@@ -23,13 +23,13 @@ import { getDatabase } from "firebase/database";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDmP3faSyWaAtrx7y5Kb7OeoOyCzUt7hHs",
-  authDomain: "reactapp-f7d64.firebaseapp.com",
-  projectId: "reactapp-f7d64",
-  storageBucket: "reactapp-f7d64.appspot.com",
-  messagingSenderId: "674190203491",
-  appId: "1:674190203491:web:33ccd1fc98bcb8ed5ab656",
-  measurementId: "G-6TYVLEEQEZ",
+  apiKey: "AIzaSyCM_VHDKm8b0_eXV02F3gNiTJswMhXbBAg",
+  authDomain: "firstreactapp-ffe15.firebaseapp.com",
+  projectId: "firstreactapp-ffe15",
+  storageBucket: "firstreactapp-ffe15.appspot.com",
+  messagingSenderId: "708047970087",
+  appId: "1:708047970087:web:d68f86b90ad1dd35909302",
+  measurementId: "G-3V6GV1X5P9",
 };
 // const currentUser = auth.currentUser;
 // console.log("currentUser", currentUser);
